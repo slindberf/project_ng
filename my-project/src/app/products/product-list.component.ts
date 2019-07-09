@@ -3,7 +3,8 @@ import { IProduct } from "./product";
 
 @Component({ //it is the Decorator that makes this class a component
     selector: 'pm-products',
-    templateUrl: './product-list.component.html' //to find our view
+    templateUrl: './product-list.component.html', //to find our view
+    styleUrls: ['./product-list.component.css']
 }) //component decorator that defines our metadata
 
 export class ProductListComponent {
