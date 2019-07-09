@@ -34,6 +34,7 @@ export class ProductListComponent {
     ]; //when we don't know the data type we use an array of any
     toggleImage():void {
         this.showImage = !this.showImage;
+        //in the template show image only if true: <img *ngIf='showImage' >
     }
 } //export to be available to other parts of the app
 //our class which finds our associated code
