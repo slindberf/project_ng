@@ -3,13 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-@NgModule({
+@NgModule({ //identify the class as an angular module by attaching the ng module Decorator
+  //and passing in metadata defining the details of this angular model
   declarations: [
     AppComponent
-  ],
+  ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule
-  ],
-  bootstrap: [AppComponent]
-})
+  ], //in the imports array we define the external modules that we want to have available to all of the components that belong to this angular module  
+  //BrowserModule which every browser app must import. BrowserModule registers important application service providers such as error handling 
+  bootstrap: [AppComponent] //defines the startup component of our app
+}) 
 export class AppModule { }
