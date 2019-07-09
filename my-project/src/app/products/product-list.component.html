@@ -18,7 +18,8 @@
     </div>
 </div>
 <div class="table-responsive">
-    <table class="table">
+    <table class="table" *ngIf='products && products.length'> 
+       <!--with ngIf the associated element and its children are added or removed from the DOM -->
         <thead>
             <tr>
                 <th>
