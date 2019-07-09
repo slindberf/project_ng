@@ -9,6 +9,11 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <pm-root></pm-root>
+  <pm-root></pm-root> 
+  <!--selector, it looks for this template in the AppModule  
+  When an angular compiler sees a directive in a template it looks to the angular module for the definition, so we declare 
+  the Appcomponent in a angular module so the compiler can find it. 
+  We also use the module to bootstrap our start up component.  
+  Add angular's BrowserModule to our angular module's imports to visualize our app correctly in browsers  -->
 </body>
 </html>
