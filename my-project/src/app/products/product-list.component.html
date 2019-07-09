@@ -14,7 +14,7 @@
     </div>    
     <div class="row">
         <div class="col-md-6">
-            <h4>Filtered by:</h4>
+            <h4>Filtered by: {{listFilter}}</h4>
         </div>
     </div>
 </div>
@@ -51,9 +51,13 @@
                     <!-- how to use property binding to bind several properties of the img element to properties of the component's class -->
                 </td>
                 <td>{{product.productName}}</td>
-                <td>{{product.productCode}}</td>
+                <td>{{product.productCode | lowercase}}</td>
                 <td>{{product.releaseDate}}</td>
-                <td>{{product.price}}</td>
+                <td>{{product.price | currency:'USD':'symbol':'1.2-2'}}</td>
+                <!--Pipes
+                    {{ product.price | currency | lowercase}}
+                    {{ product.price | currency:'USD':'symbol':'1.2-2'}}
+                -->
                 <td>{{product.starRating}}</td> 
             </tr> 
             <!--for...in iterates over the properties of an object -> Result: 0,1,2
