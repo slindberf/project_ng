@@ -6,6 +6,6 @@ import { Component } from "@angular/core";
 }) //component decorator that defines our metadata
 
 export class ProductListComponent {
-
+    pageTitle: string = 'Product List';
 } //export to be available to other parts of the app
 //our class which finds our associated code

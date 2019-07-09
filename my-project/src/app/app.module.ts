@@ -8,7 +8,7 @@ import { ProductListComponent } from './products/product-list.component';
   //and passing in metadata defining the details of this angular model
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent 
   ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule
