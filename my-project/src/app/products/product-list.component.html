@@ -23,7 +23,8 @@
         <thead>
             <tr>
                 <th>
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" 
+                    (click)='toggleImage()' >
                         Show Image
                     </button>
                 </th>
@@ -37,10 +38,14 @@
         <tbody>
             <tr *ngFor='let product of products'>
                 <td>
-                    <img [src]='product.imageUrl'
+                    <!--Binding target in [] and binding source in '' : <img [src]='product.imageUrl'>  -->
+                    <!--Template expression enclosed in {} : <img src={{product.imageUrl}}>  -->
+                    <!-- <img src='http://openclipart.org/{{product.imageUrl}}'>  -->
+                    <img *ngIf='showImage' [src]='product.imageUrl' 
                          [title]='product.productName'
                          [style.width.px]='imageWidth'
-                         [style.margin.px]='imageMargin'> <!-- how to use property binding to bind several properties of the img element to properties of the component's class -->
+                         [style.margin.px]='imageMargin'> 
+                    <!-- how to use property binding to bind several properties of the img element to properties of the component's class -->
                 </td>
                 <td>{{product.productName}}</td>
                 <td>{{product.productCode}}</td>
