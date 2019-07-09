@@ -36,14 +36,20 @@
         </thead>
         <tbody>
             <tr *ngFor='let product of products'>
-                <td></td>
+                <td>
+                    <img [src]='product.imageUrl'
+                         [title]='product.productName'
+                         [style.width.px]='imageWidth'
+                         [style.margin.px]='imageMargin'> <!-- how to use property binding to bind several properties of the img element to properties of the component's class -->
+                </td>
                 <td>{{product.productName}}</td>
                 <td>{{product.productCode}}</td>
                 <td>{{product.releaseDate}}</td>
                 <td>{{product.price}}</td>
-                <td>{{product.starRating}}</td>
-                
-            </tr>   
+                <td>{{product.starRating}}</td> 
+            </tr> 
+            <!--for...in iterates over the properties of an object -> Result: 0,1,2
+            for...of iterates over iterable objects, such as an array -> Result: bla, ble, blo  -->  
         </tbody>
     </table>
 </div>
