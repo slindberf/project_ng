@@ -2,11 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './products/product-list.component';
 
 @NgModule({ //identify the class as an angular module by attaching the ng module Decorator
   //and passing in metadata defining the details of this angular model
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductListComponent
   ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule

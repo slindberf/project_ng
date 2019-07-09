@@ -6,7 +6,7 @@ import { Component } from '@angular/core'; //import the members that we need
   //A custom Html tag, whenever this directive is used in the html angular renders this component's template. 
   template:  `
     <div><h1>{{pageTitle}}</h1>
-      <div>My First Component</div>
+      <pm-products></pm-products>
     </div>
     `
     //View Layout
