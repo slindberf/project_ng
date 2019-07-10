@@ -60,7 +60,8 @@
                     {{ product.price | currency | lowercase}}
                     {{ product.price | currency:'USD':'symbol':'1.2-2'}}
                 -->
-                <td><pm-star [rating]='product.starRating'></pm-star></td> <!--use a component as a directive-->
+                <td><pm-star [rating]='product.starRating'
+                    (ratingClicked)='onRatingClicked($event)'></pm-star></td> <!--use a component as a directive-->
             </tr> 
             <!--for...in iterates over the properties of an object -> Result: 0,1,2
             for...of iterates over iterable objects, such as an array -> Result: bla, ble, blo  -->  
