@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { from } from 'rxjs';
+import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 
 @NgModule({ //identify the class as an angular module by attaching the ng module Decorator
   //and passing in metadata defining the details of this angular model
   declarations: [
     AppComponent,
-    ProductListComponent 
+    ProductListComponent,
+    ConvertToSpacesPipe 
   ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule,
