@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './products/product-list.component';
 import { from } from 'rxjs';
@@ -17,7 +18,8 @@ import { StarComponent } from './shared/star.component';
   ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   ], //in the imports array we define the external modules that we want to have available to all of the components that belong to this angular module  
   //BrowserModule which every browser app must import. BrowserModule registers important application service providers such as error handling 
   bootstrap: [AppComponent] //defines the startup component of our app

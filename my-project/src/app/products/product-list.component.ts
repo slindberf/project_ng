@@ -6,7 +6,7 @@ import { ProductService } from "./product.service";
     selector: 'pm-products',
     templateUrl: './product-list.component.html', //to find our view
     styleUrls: ['./product-list.component.css'],
-    //providers: [ProductService] -> already registered
+    //providers: [ProductService] -> already registered in product.service.ts
 }) //component decorator that defines our metadata
 
 export class ProductListComponent implements OnInit{
@@ -34,7 +34,6 @@ export class ProductListComponent implements OnInit{
     products: IProduct[] = []; //when we don't know the data type we use an array of any
     
     constructor(private productService: ProductService){ //executed when the component is created
-
     }
 
     performFilter(filterBy: string): IProduct[] {
