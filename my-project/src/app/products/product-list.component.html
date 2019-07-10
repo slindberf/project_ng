@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor='let product of filteredProducts'>
+            <tr *ngFor='let product of filteredProducts'> <!-- Binding to our filteredProducts property -->
                 <td>
                     <!--Binding target in [] and binding source in '' : <img [src]='product.imageUrl'>  -->
                     <!--Template expression enclosed in {} : <img src={{product.imageUrl}}>  -->
@@ -60,7 +60,7 @@
                     {{ product.price | currency | lowercase}}
                     {{ product.price | currency:'USD':'symbol':'1.2-2'}}
                 -->
-                <td>{{product.starRating}}</td> 
+                <td><pm-star></pm-star></td> <!--use a component as a directive-->
             </tr> 
             <!--for...in iterates over the properties of an object -> Result: 0,1,2
             for...of iterates over iterable objects, such as an array -> Result: bla, ble, blo  -->  

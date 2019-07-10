@@ -45,16 +45,29 @@ export class ProductListComponent implements OnInit{
           "price": 32.99,
           "starRating": 4.2,
           "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
-        }
+        },
+        {
+          "productId": 3,
+          "productName": "Garden Cart",
+          "productCode": "GDN-0023",
+          "releaseDate": "March 18, 2016",
+          "description": "15 gallon capacity rolling garden cart",
+          "price": 32.99,
+          "starRating": 4.2,
+          "imageUrl": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+      }
     ]; //when we don't know the data type we use an array of any
+    
     constructor(){
         this.filteredProducts = this.products;
-        this.listFilter = 'cart';
+        this.listFilter = 'cart'; 
     }
+
     performFilter(filterBy: string): IProduct[] {
         filterBy = filterBy.toLocaleLowerCase();
         return this.products.filter((product: IProduct) => 
             product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+            //if filter text is found in the productName if so the element is added to the filtered list
     }
 
     toggleImage():void {
