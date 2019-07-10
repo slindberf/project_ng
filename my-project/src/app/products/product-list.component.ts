@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
 
 @Component({ //it is the Decorator that makes this class a component
@@ -7,7 +7,8 @@ import { IProduct } from "./product";
     styleUrls: ['./product-list.component.css']
 }) //component decorator that defines our metadata
 
-export class ProductListComponent {
+export class ProductListComponent implements OnInit{
+
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
@@ -38,6 +39,9 @@ export class ProductListComponent {
     toggleImage():void {
         this.showImage = !this.showImage;
         //in the template show image only if true: <img *ngIf='showImage' >
+    }
+    ngOnInit(): void {
+        console.log("In OnInit");
     }
 } //export to be available to other parts of the app
 //our class which finds our associated code
