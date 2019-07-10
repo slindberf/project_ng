@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { IProduct } from "./product";
 import { ProductService } from "./product.service"; 
+import { error } from "util";
+
+
 
 @Component({ //it is the Decorator that makes this class a component
     selector: 'pm-products',
@@ -15,7 +18,7 @@ export class ProductListComponent implements OnInit{
     imageWidth: number = 50;
     imageMargin: number = 2;
     showImage: boolean = false; // so the images are not displayed when the page is first loaded
-    
+    errorMessage: string;
 
     _listFilter: string;
     get listFilter():string {
@@ -48,9 +51,13 @@ export class ProductListComponent implements OnInit{
         //in the template show image only if true: <img *ngIf='showImage' >
     }
     ngOnInit(): void { //perform any component initialization
-        this.products = this.productService.getProducts();  
-        this.filteredProducts = this.products;
-        this.listFilter = 'cart'; 
+        this.productService.getProducts().subscribe(
+            products => {
+                this.products = products;
+                this.filteredProducts = this.products;
+                error => this.errorMessage = <any>error //casting operator
+            }  
+        );
     }
 } //export to be available to other parts of the app
 //our class which finds our associated code
