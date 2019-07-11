@@ -5,10 +5,18 @@ import { Component } from '@angular/core'; //import the members that we need
   //the selector defines the component's directive name. 
   //A custom Html tag, whenever this directive is used in the html angular renders this component's template. 
   template:  `
-    <div><h1>{{pageTitle}}</h1>
-      <pm-products></pm-products>
+    <nav class='navbar navbar-expand navbar-light bg-light'>
+      <a class='navbar-brand'>{{pageTitle}}</a>
+      <ul class='nav nav-pills'>
+          <li><a class='nav-link' [routerLink]="['/welcome']">Home</a></li>
+          <li><a class='nav-link' [routerLink]="['/products']">Product List</a></li>
+      </ul>
+    </nav> 
+    <div class='container'>
+      <router-outlet></router-outlet>
     </div>
     `
+
     //View Layout
     //Binding: {{pageTitle}}
 })//template associated with this class. 

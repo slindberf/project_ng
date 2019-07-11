@@ -6,7 +6,6 @@ import { error } from "util";
 
 
 @Component({ //it is the Decorator that makes this class a component
-    selector: 'pm-products',
     templateUrl: './product-list.component.html', //to find our view
     styleUrls: ['./product-list.component.css'],
     //providers: [ProductService] -> already registered in product.service.ts

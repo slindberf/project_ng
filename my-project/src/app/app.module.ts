@@ -18,7 +18,8 @@ import { WelcomeComponent } from './home/welcome.component';
     ProductListComponent,
     ConvertToSpacesPipe,
     StarComponent,
-    ProductDetailComponent 
+    ProductDetailComponent,
+    WelcomeComponent
   ], //in the declarations array we define which of our components belong to this module
   imports: [
     BrowserModule,
