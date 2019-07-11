@@ -50,7 +50,7 @@
                          [style.margin.px]='imageMargin'> 
                     <!-- how to use property binding to bind several properties of the img element to properties of the component's class -->
                 </td>
-                <td>{{product.productName}}</td>
+                <td> <a [routerLink]="['/products', product.productId]">{{product.productName}}</a></td>
                 <td>{{product.productCode | lowercase | convertToSpaces:'-'}}</td> 
                 <!--Custom Pipe: product.productCode is passed in to the first argument to the transform method
                 and the hash convertToSpaces :'-' is the second parameter passed in to the transform method -->
